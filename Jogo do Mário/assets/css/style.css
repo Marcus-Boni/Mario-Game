@@ -1,0 +1,106 @@
+@import url('http://fonts.cdnfonts.com/css/new-super-mario-font-u');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'New Super Mario Font U', sans-serif;
+}
+.score h1 {
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: white;
+    font-weight: normal;
+    padding: 10px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/gif_mariobros.gif);
+    background-size: cover;
+    background-position: center;
+}
+main img {
+    cursor: pointer;
+    width: 400px;
+    height: 300px;
+}
+.game_board {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border-bottom: 20px solid greenyellow;
+    margin: auto;
+    overflow: hidden;
+    background: -webkit-linear-gradient(#87CEEB, #E0F6FF);
+}
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe_animation 1.5s infinite linear;
+}
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+.jump {
+    animation: jump 500ms ease-out;
+}
+.clouds {
+    position: absolute;
+    width: 750px;
+    animation: clouds_animation 20s infinite linear;
+}
+.coin {
+    position: absolute;
+    top: 70%;
+    width: 50px;
+    animation: pipe_animation 1.5s infinite linear;
+}
+.display_coin {
+    display: none;
+}
+@keyframes pipe_animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+@keyframes clouds_animation {
+    from {
+        right: -750px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        transform: scale(0.8);
+    }
+}
