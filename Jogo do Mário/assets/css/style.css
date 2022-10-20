@@ -127,4 +127,17 @@ main img {
     section {
         transform: scale(0.8);
     }
+    .game_over {
+        transform: scale(0.5);
+        width: 100%;
+        left: 0%;
+        top: 25%;
+        background-image: url('../images/Gif-Game-over-mobile.gif');
+    }
+    .game_over--area h1 {
+        text-shadow: 2px 2px 2px #333;
+        color: rgb(255, 0, 0);
+        margin-top: 70px;
+        cursor: pointer;
+    }
 }
