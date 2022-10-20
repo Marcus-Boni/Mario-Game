@@ -6,6 +6,7 @@ const audio = document.querySelector('audio');
 const main = document.querySelector('main');
 const gameBoard = document.querySelector('.game_board');
 const score = document.querySelector('.score h1');
+const gameoverScreen = document.querySelector('.game_over');
 
 
 const jump = () => {
@@ -39,6 +40,8 @@ const loop = setInterval(() => {
         
         clouds.style.animation = 'none';
         clouds.style.marginLeft = '700px';
+
+        gameoverScreen.style.display = 'block';
         
         audio.src = 'images/audio_gameover.mp3';
         
@@ -55,7 +58,7 @@ const anotherLoop = setInterval(() => {
         
         coin.classList.add('display_coin');
         audio.src = 'images/audio_coin.mp3';
-        
+
     }
     setTimeout(() => {
         coin.classList.remove('display_coin')
@@ -75,3 +78,6 @@ const scoreTime = setInterval(()=>{
 
 document.addEventListener('keydown', jump);
 main.addEventListener('click', hide);
+gameoverScreen.querySelector('.game_over--area').addEventListener('click', () => {
+    window.location.reload();
+})

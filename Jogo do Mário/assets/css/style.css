@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'New Super Mario Font U', sans-serif;
+    font-family: 'New Super Mario Font U';
 }
 .score h1 {
     font-size: 60px;
@@ -98,6 +98,30 @@ main img {
         right: 100%;
     }
 }
+
+.game_over {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    background-image: url('../images/gif-game-over.gif');
+    background-position: center;
+    background-size: cover;
+}
+.game_over--area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 280px;
+    text-shadow: 2px 2px 2px #333;
+    color: rgb(238, 255, 0);
+    cursor: pointer;
+}
+
+
 
 @media (max-width: 600px) {
     section {
